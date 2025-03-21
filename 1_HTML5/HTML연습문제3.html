@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML연습문제3</title>
+</head>
+
+<body>
+  <h1>회원 가입</h1>
+
+  <form>
+    <fieldset>
+      <legend>필수 입력 정보</legend>
+      <table>
+        <tr>
+          <th>ID</th>
+          <td>
+            <input name="user" placeholder="아이디 10글자 이내">
+          </td>
+          <td>
+            <button>중복 확인</button>
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td colspan="2">
+            <input type="password" name="user" size="30" placeholder="영문, 숫자, 특수문자 포함 8자 이상">
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호 확인</th>
+          <td colspan="2">
+            <input name="user" size="30">
+          </td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>
+            <input name="user">
+          </td>
+          <td>
+            <select name="user">
+              <option>직접입력</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  
+    <fieldset>
+      <legend>추가 정보</legend>
+      프로필 사진 <input type="file">
+
+      <br><br>
+
+      성별 : <label><input type="radio" name="gender"> 남자</label> <label><input type="radio" name="gender">여자</label>
+      
+      <br><br>
+
+      생년월일 : <input type="date" name="birth">
+      
+      <br><br>
+
+      <div>취미</div>
+      <div>
+        <label><input type="checkbox" name="hobby"> 야구</label>
+        <label><input type="checkbox" name="hobby"> 농구</label>
+        <label><input type="checkbox" name="hobby"> 축구</label>
+      </div>
+      <div>
+        <label><input type="checkbox" name="hobby"> 공부</label>
+        <label><input type="checkbox" name="hobby"> 음악감상</label>
+      </div>
+      <div>
+        <label><input type="checkbox" name="hobby"> 기타</label>
+        <label><input type="text" name="hobby"></label>
+      </div>
+
+      <br>
+      <div>자기소개</div>
+      <textarea name="self" rows="10" cols="80"></textarea>
+    </fieldset>
+
+    <button>회원가입</button>
+    <button type="reset">다시입력</button>
+    <button>이전으로</button>
+  </form>
+
+
+</body>
+
+</html>
