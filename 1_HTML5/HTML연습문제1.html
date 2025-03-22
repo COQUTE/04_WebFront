@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML연습문제1</title>
 </head>
+
 <body>
-  
+
   <form>
     <p>고객명 : <input type="text" name="customer"></p>
-    <p>전화번호 : <input type="tel" name="customer"></p>
+    <p>전화번호 : <input type="text" name="customer"></p>
     <p>E-mail : <input type="text" name="customer"></p>
-  
-    피자선택 : 
-    <select name="kind">
-      <option>피자를 선택하세요</option>
-      <option>고구마 피자</option>
-      <option>포테이토 피자</option>
-      <option>콤비네이션 피자</option>
+
+    피자선택 :
+    <select name="pizza">
+      <option disabled selected>피자를 선택하세요</option>
+      <option value="combination">콤비네이션 피자</option>
+      <option value="potato">포테이토 피자</option>
+      <option value="sweetPotato">고구마 피자</option>
     </select>
-  
     <fieldset>
       <legend>피자 사이즈</legend>
-      <label>
-        <input type="radio" name="pizza"> Small <br>
-      </label>
-      <label>
-        <input type="radio" name="pizza"> Medium <br>
-      </label>
-      <label>
-        <input type="radio" name="pizza"> Large
-      </label>
+      <input type="radio" name="pizza" id="Small" value="S"> <label for="Small">Small</label> <br><br>
+      <input type="radio" name="pizza" id="Medium" value="M"> <label for="Medium">Medium</label> <br><br>
+      <input type="radio" name="pizza" id="Large" value="L"> <label for="Large">Large</label>
     </fieldset>
-
     <fieldset>
       <legend>토핑 선택</legend>
-      <label>
-        <input type="checkbox" name="topping"> 베이컨 <br>
-      </label>
-      <label>
-        <input type="checkbox" name="topping"> 치즈 <br>
-      </label>
-      <label>
-        <input type="checkbox" name="topping"> 양파 <br>
-      </label>
-      <label>
-        <input type="checkbox" name="topping"> 버섯
-      </label>
+      <label><input type="checkbox" name="pizza"> 베이컨</label><br><br>
+      <label><input type="checkbox" name="pizza"> 치즈</label><br><br>
+      <label><input type="checkbox" name="pizza"> 양파</label><br><br>
+      <label><input type="checkbox" name="pizza"> 버섯</label><br><br>
     </fieldset>
 
-    <p>희망배송시간 : <input type="time" name="needs"></p>
-    <p>배송시 요청사항 : <textarea name="needs" rows="3"></textarea></p>
+    <p>희망배송 시간 : <input type="time" name="customer"></p>
+    <p>배송시 요청사항 : <textarea name="customer" rows="3"></textarea></p>
 
     <button>주문하기</button>
   </form>
-  
-  
+
 </body>
+
 </html>

@@ -8,8 +8,8 @@
 </head>
 
 <body>
-  <h1>회원 가입</h1>
 
+  <h1>회원 가입</h1>
   <form>
     <fieldset>
       <legend>필수 입력 정보</legend>
@@ -17,77 +17,73 @@
         <tr>
           <th>ID</th>
           <td>
-            <input name="user" placeholder="아이디 10글자 이내">
-          </td>
-          <td>
+            <input type="text" name="info" placeholder="아이디 10글자 이내" maxlength="10">
             <button>중복 확인</button>
           </td>
         </tr>
         <tr>
           <th>비밀번호</th>
-          <td colspan="2">
-            <input type="password" name="user" size="30" placeholder="영문, 숫자, 특수문자 포함 8자 이상">
+          <td>
+            <input type="password" name="info" size="30" placeholder="영문,숫자,특수문자 포함 8자 이상" minlength="8">
           </td>
         </tr>
         <tr>
           <th>비밀번호 확인</th>
-          <td colspan="2">
-            <input name="user" size="30">
+          <td>
+            <input type="password" name="info" size="30" minlength="8">
           </td>
         </tr>
         <tr>
           <th>Email</th>
           <td>
-            <input name="user">
-          </td>
-          <td>
-            <select name="user">
-              <option>직접입력</option>
+            <input type="email" name="info">
+            <select name="info">
+              <option disabled selected>직접입력</option>
+              <option>naver.com</option>
+              <option>google.com</option>
             </select>
           </td>
         </tr>
       </table>
     </fieldset>
-  
     <fieldset>
       <legend>추가 정보</legend>
-      프로필 사진 <input type="file">
-
-      <br><br>
-
-      성별 : <label><input type="radio" name="gender"> 남자</label> <label><input type="radio" name="gender">여자</label>
-      
-      <br><br>
-
-      생년월일 : <input type="date" name="birth">
-      
-      <br><br>
-
-      <div>취미</div>
+      <div>프로필 사진 <input type="file" name="info"></div>
+      <p>
+        성별 :
+        <input type="radio" name="info" id="male"> <label for="male">남자</label>
+        <input type="radio" name="info" id="female"> <label for="female">여자</label>
+      </p>
+      <p>
+        생년월일 :
+        <input type="date">
+      </p>
+      <p>
+        취미
+        <br>
+        <input type="checkbox" name="info" id="baseball"> <label for="baseball">야구</label>
+        <input type="checkbox" name="info" id="basketball"> <label for="basketball">농구</label>
+        <input type="checkbox" name="info" id="football"> <label for="football">축구</label>
+        <br>
+        <input type="checkbox" name="info" id="study"> <label for="study">공부</label>
+        <input type="checkbox" name="info" id="music"> <label for="music">음악감상</label>
+        <br>
+        <input type="checkbox" name="info" id="etc">
+        <label for="etc">
+          기타 <input type="text" name="info">
+        </label>
+      </p>
       <div>
-        <label><input type="checkbox" name="hobby"> 야구</label>
-        <label><input type="checkbox" name="hobby"> 농구</label>
-        <label><input type="checkbox" name="hobby"> 축구</label>
+        자기소개
+        <br>
+        <textarea name="info" rows="8" cols="60" style="resize: none;"></textarea>
       </div>
-      <div>
-        <label><input type="checkbox" name="hobby"> 공부</label>
-        <label><input type="checkbox" name="hobby"> 음악감상</label>
-      </div>
-      <div>
-        <label><input type="checkbox" name="hobby"> 기타</label>
-        <label><input type="text" name="hobby"></label>
-      </div>
-
-      <br>
-      <div>자기소개</div>
-      <textarea name="self" rows="10" cols="80"></textarea>
     </fieldset>
-
+    <br>
     <button>회원가입</button>
-    <button type="reset">다시입력</button>
+    <button>다시입력</button>
     <button>이전으로</button>
   </form>
-
 
 </body>
 
