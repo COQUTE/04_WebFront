@@ -82,5 +82,71 @@
     </div>
   </div>
 
+  <hr>
+
+  <h3>반응 선택자</h3>
+  <pre>
+    사용자의 움직임에 따라 반응하여 스타일이 달라지는 선택자
+    (마우스 오버, 클릭 유지..)
+
+    - 요소를 클릭하고 있는 경우(:active)
+    - 요소에 마우스가 올라가는 경우(:hover)
+  </pre>
+
+  <div class="div-cls" id="active-test">:active 테스트</div>
+  <div class="div-cls" id="hover-test">:hover 테스트</div>
+
+  <hr>
+
+  <h3>상태 선택자</h3>
+  <pre>
+    입력 양식(input, input 관련 태그)의 상태에 따라 선택되는 선택자.
+
+    :focus -> 요소에 초점이 맞춰졌을 때
+    :checked -> 요소가 체크 되었을 때 (radio, checkbox)
+
+    :enabled / :disabled
+    -> 요소가 사용 가능한/불가능한 상태일 때
+  </pre>
+
+  <h4>:focus</h4>
+  <input id="focus-test">
+
+  <h4>:checked</h4>
+  사과 <input type="checkbox" name="fruits"> <br>
+  바나나 <input type="checkbox" name="fruits"> <br>
+  딸기 <input type="checkbox" name="fruits"> <br>
+
+  <h4>:enabled / :disabled</h4>
+  <div id="test-div2">
+    사용 가능 : <input type="text" enabled> <br>
+    사용 불가능 : <input type="text" disabled>
+  </div>
+
+  <hr>
+
+  <h3>동위 선택자</h3>
+  <pre>
+    동위 관계(동등한 위치 == 형제 관계)에서
+    뒤(다음)에 위치한 요소를 선택하는 선택자.
+
+    A
+    B
+    B
+
+    1) A선택자 + B선택자 { css 코드; }
+    A 바로 뒤에 있는 B 요소 하나를 선택 (+)
+
+    2) A선택자 ~ B선택자 { css 코드; }
+    A 뒤에 있는 모든 B 요소를 선택 (~ 틸드(Tilde))
+  </pre>
+
+  <div id="div1">1번 입니다.</div>
+  <div>2번 입니다.</div>
+  <div id="div3">3번 입니다.</div>
+  <div>4번 입니다.</div>
+  <p>관련 없는 태그입니다!</p>
+  <div>5번 입니다.</div>
+  
 </body>
 </html>

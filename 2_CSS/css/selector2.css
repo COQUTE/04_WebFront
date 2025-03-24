@@ -32,3 +32,74 @@ p[name="name-1"] {
 #test-div p {
   background-color: yellowgreen;
 }
+
+/* 반응 선택자 */
+.div-cls {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+
+  /* 아래쪽 요소와의 간격
+  == 아래쪽 여백을 30px 지정
+  */
+  margin-bottom: 30px;
+
+  /* 요소에 마우스 커서가 올라가면
+     손가락 모양으로 변경 */
+  cursor: pointer;
+}
+
+#active-test:active {
+  background-color: yellow;
+}
+
+#hover-test:hover {
+  background-color: pink;
+  width: 230px;
+  height: 230px;
+}
+
+#hover-test {
+  /*
+    #hover-test 요소가 변화를 일으키면
+    0.5초 동안 변해라
+
+    트랜지션(transition) : HTML 요소가
+    한 상태에서 다른 상태로 변할 때의
+    변화를 부드럽게 만들어주는 애니메이션 효과
+    점진적으로 몇 초에 걸쳐서 변화해라..
+  */
+  transition-duration: 0.5s;
+}
+
+/* 상태 선택자 */
+#focus-test:focus {
+  background-color: red;
+}
+
+input[name="fruits"]:checked {
+  width: 30px;
+  height: 30px;
+
+  /* radio, checkbox는
+  크기를 제외한 스타일 적용되지 않는다 */
+  background-color: red;
+}
+
+#test-div2 > input:enabled {
+  background-color: antiquewhite;
+}
+
+#test-div2 > input:disabled {
+  background-color: lightpink;
+}
+
+/* 동위 선택자 */
+#div1 + div {
+  background-color: olive;
+}
+
+#div3 ~ div {
+  background-color: blue;
+}
