@@ -1,0 +1,90 @@
+img {
+  width: 250px;
+}
+
+/* 좌우 이동 */
+.trans-x-2d:hover {
+  transform: translateX(100px);
+}
+
+/* 상하 이동 */
+.trans-y-2d:hover {
+  transform: translateY(100px);
+}
+
+/* 대각선 이동 */
+.trans-xy-2d:hover {
+  transform: translate(100px, 100px);
+}
+
+/* 가로방향 확대/축소 */
+.trans-x-scale-2d:hover {
+  transform: scaleX(2);
+  margin-left: 200px;
+}
+
+/* 세로방향 확대/축소 */
+.trans-y-scale-2d:hover {
+  transform: scaleY(2);
+}
+
+/* 대각선 확대/축소 */
+.trans-scale-2d:hover {
+  transform: scale(2, 2);
+  margin: 150px 150px;
+}
+
+/* 요소 회전 */
+.trans-rotate:hover {
+  transform: rotate(180deg);
+}
+
+/* transition */
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  border: 1px solid black;
+}
+
+.test1:hover {
+  background-color: yellow;
+  transition-duration: 1s;
+}
+
+.test2:hover {
+  transform: rotate(360deg);
+  background-color: skyblue;
+
+  /* 테두리 모서리 곡률 지정 */
+  border-radius: 50%;
+
+  transition-duration: 3s;
+}
+
+.test3 {
+  transition-duration: 5s;
+
+  transition-timing-function: ease-in-out;
+  /*
+  ease (기본값) : 처음과 끝이 부드럽게 변화
+  linear : 등속
+  ease-in : 천천히 시작 -> 빠르게 끝남
+  ease-out : 빠르게 시작 -> 천천히 끝남
+  ease-in-out : 천천히 시작 -> 빠르게 진행 -> 천천히 끝남
+  */
+}
+
+.test3:hover {
+  background-color: yellowgreen;
+  transform: rotate(720deg);
+}
+
+.test4 {
+  transition-delay: 2s;
+}
+
+.test4:hover {
+  transform: translateX(100px);
+}
