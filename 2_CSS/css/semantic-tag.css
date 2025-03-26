@@ -269,3 +269,75 @@ footer a {
 footer span {
   padding: 0 10px;
 }
+
+/*
+미디어 쿼리(Media Query)
+
+@media
+미디어 쿼리를 선언하는 키워드로,
+특정 조건(화면 크기)에 따라 CSS 스타일을 적용할 때 사용
+
+all
+모든 미디어 유형에 적용됨.
+생략가능, 보통 screen을 많이 사용함.
+
+(max-width: 767px) : 반응형 모바일 기준
+화면 너비가 767px 이하일 때 스타일을 적용함
+스마트폰, 작은 태블릿 등 작은 화면에서 적용하는 크기
+*/
+
+/* 모바일 : 767px 이하일 때 */
+@media all and (max-width: 767px) {
+  main {
+    width: 100vw;
+    /* vw : viewport width의 약자
+      현재 뷰포트의 100%만큼 너비 차지
+    */
+  }
+
+  header {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    border-bottom: none;
+    height: auto;
+  }
+
+  nav > ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    flex-basis: auto;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content-2 {
+    padding: 20px;
+  }
+
+  footer {
+    width: 100vw;
+  }
+
+  footer p,
+  footer > section > * {
+    font-size: 12px;
+  }
+}
+
+/* 태블릿 : 768px ~ 1023px 범위 */
+@media all and (min-width: 768px) and (max-width:1023px) {
+
+}
+
+/* PC : 너비가 1024px 이상일 때 */
+@media (min-width: 1024px) {
+
+}
