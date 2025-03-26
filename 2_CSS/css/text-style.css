@@ -1,0 +1,131 @@
+#color-ul > li {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#color-ul > li:nth-child(1) {
+  color: red;
+}
+
+#color-ul > li:nth-child(2) {
+  color: #0335fc;
+}
+
+#color-ul > li:nth-child(3) {
+  color: rgb(50, 100, 150);
+}
+
+#color-ul > li:nth-child(4) {
+  color: rgba(50, 100, 150, 0.8);
+}
+
+#color-ul > li:nth-child(5) {
+  color: hsl(360, 100%, 50%);
+}
+
+#color-ul > li:nth-child(6) {
+  color: hsla(360, 100%, 50%, 0.5);
+}
+
+/* text-decoration */
+#deco-ul > li:nth-child(1) {
+  text-decoration: underline;
+}
+#deco-ul > li:nth-child(2) {
+  text-decoration: line-through;
+}
+#deco-ul > li:nth-child(3) {
+  text-decoration: overline;
+}
+#deco-ul > li:nth-child(4) > a {
+  text-decoration: none;
+}
+
+/* text-align */
+#align-test {
+  width: 550px;
+  border: 2px solid black;
+}
+
+#align-test > p:nth-child(1) {
+  text-align: left; /* 기본값 */
+}
+
+#align-test > p:nth-child(2) {
+  text-align: right;
+}
+
+#align-test > p:nth-child(3) {
+  text-align: center;
+}
+
+#align-test > p:nth-child(4) {
+  text-align: justify;
+}
+
+/* line-height */
+#line-test > p:last-child {
+  line-height: 30px;
+}
+
+#center-test {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+#center-test > span {
+  line-height: 200px;
+  /* 요소 높이와 동일한 line-height 설정으로
+  글자 세로 중앙 정렬 */
+}
+
+/* letter-spacing */
+#letter-test {
+  letter-spacing: 10px;
+}
+
+/* text-shadow */
+#shadow-test {
+  background-color: black;
+  padding: 30px;
+}
+
+#shadow-test > p {
+  font-size: 75px;
+  font-weight: bold;
+}
+
+#shadow-test > p:nth-child(1) {
+  color: orange;
+  text-shadow: 3px 3px white;
+  /* 텍스트를 기준으로 오른쪽을 3px 아래쪽으로 3px
+  흰색으로 표현 */
+}
+
+#shadow-test > p:nth-child(2) {
+  color: white;
+
+  text-shadow: 5px 5px 5px #bbb;
+  /* 오른쪽으로 5px, 아래쪽으로 5px,
+  5px 정도 흐리게 퍼져라
+  #bbb가 색상 */
+}
+
+#shadow-test > p:nth-child(3) {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 0px 10px magenta;
+}
+
+#shadow-test > p:nth-child(4) {
+  text-shadow: 0px 0px 4px #ccc,
+              0px -5px 4px #ff3,
+              2px -10px 6px #fd3,
+              -2px -15px 11px #f80,
+              2px -20px 18px #f20;
+}
