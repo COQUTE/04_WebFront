@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13_시맨틱태그</title>
+
+  <link rel="stylesheet" href="css/semantic-tag.css">
+  <script src="https://kit.fontawesome.com/7c4e3b50a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <!--
+    시맨틱(Semantic, 의미) 태그
+    - 태그 이름 자체가 해당 요소의 의미와 역할을 명확히 나타내는 태그
+
+    - 기존 영역 분할에 주로 사용되던 div, span 등의 태그는
+    태그 이름만 봤을 때 나눈다는 것 이외의 의미를 파악할 수 없음.
+    -> 태그만 봤을 때 태그의 목적을 알 수 없어
+    id 또는 class를 반드시 추가해야 했다.
+
+    이런 문제점을 해결하고자
+    태그 이름만으로 어느정도 어떤 역할을 하는지 알 수 있고,
+    웹 접근성(SEO : Search Engine Optimization)을
+    향상하는데 도움이 되는 시맨틱 태그가 추가됨.
+
+    [제공하는 태그]
+
+    header 태그 : 문서의 제목, 머리말 영역
+
+    footer 태그 : 문서의 하단 부분, 꼬리말, 정보 작성 영역
+
+    nav 태그 : 나침반 역할(다른페이지, 사이트 이동)의 링크 작성 영역
+
+    main 태그 : 한 페이지에 한 번만 사용해야 하며, 문서의 핵심 콘텐츠를 감싸는 역할
+
+    section 태그 : 구역 구문을 위한 영역
+
+    article 태그 : 본문과 독립된 콘텐츠를 작성하는 영역( 블로그 포스트, 뉴스 기사, 사용자 리뷰 등 독립적으로 배포할 수 있는 콘텐츠를 감쌀 때 )
+
+    aside 태그 : 사이드바(보통 양쪽), 광고 영역
+    -->
+
+    <main>
+      <header>
+
+        <section>
+          <!-- 클릭시 메인페이지로 이동하는 로고 -->
+          <a href="#">
+            <img src="../images/logo.jpg" id="home-logo">
+          </a>
+        </section>
+
+        <!-- 검색창 부분 -->
+        <section>
+          <section class="search-area">
+            <!-- form 내부 input 태그값을 서버 또는 페이지로 제출/전달 -->
+            <form action="#" name="search-form">
+              <!-- fieldset: from 태그 내부에서 input을 종류별로 묶는 용도로 자주 사용 -->
+              <fieldset>
+                <!-- autocomplete : HTML 기본 자동완성 사용 X -->
+                <input type="search" id="query" name="query"
+                autocomplete="off" placeholder="검색어를 입력해주세요.">
+                <button id="search-btn" class="fa-solid fa-magnifying-glass"></button>
+              </fieldset>
+            </form>
+          </section>
+        </section>
+
+        <!-- 빈 부분 -->
+        <section></section>
+      </header>
+      
+      <nav>
+        <ul>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자유게시판</a></li>
+          <li><a href="#">질문게시판</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">1:1문의</a></li>
+        </ul>
+      </nav>
+      
+      <section class="content">
+        <!-- 메인 콘텐트 작성 영역 -->
+        <section class="content-1">
+          <div class="content-item">
+            <div>
+              <img src="/images/cats/cat1.jpg">
+            </div>
+            <h1>
+              <a href="#">[속보] 화재 진압</a>
+            </h1>
+            <p>어느 작은 마을에 '엘렌'이라는 소녀가 살고 있었습니다.
+              그녀는 항상 책을 끼고 다니며 새로운 이야기를 상상하는 것을 좋아했습니다.
+              마을에는 작은 도서관이 하나 있었는데,
+              그곳에서 그녀는 셀 수 없이 많은 시간을 보내곤 했습니다.
+              엘렌이 가장 좋아하는 책은 고대 전설과 신화에 관한 이야기였습니다.
+              아직도 해야할 이야기들이 많지만 여기까지 하도록 하겠습니다.
+            </p>
+          </div>
+          <div class="content-item">
+            <div>
+              <img src="/images/cats/cat2.jpg">
+            </div>
+            <h1>
+              <a href="#">[속보] 화재 진압</a>
+            </h1>
+            <p>진격의 거인은 명작이다.</p>
+          </div>
+        </section>
+        
+        <!-- 아이디/비밀번호 로그인 영역 -->
+        <section class="content-2">
+          <form action="#" name="login-form">
+
+            <fieldset id="id-pw-area">
+              <section>
+                <input type="text" name="inputId" placeholder="아이디">
+                <input type="password" name="inputPw" placeholder="비밀번호">
+              </section>
+              <section>
+                <button>로그인</button>
+              </section>
+            </fieldset>
+
+            <label>
+              <input type="checkbox" name="saveId">
+              아이디 저장
+            </label>
+          </form>
+
+          <!-- 회원가입 / ID/PW 찾기 영역 -->
+          <section id="signup-find-area">
+            <a href="#">회원가입</a>
+            <span>|</span>
+            <a href="#">ID/PW 찾기</a>
+          </section>
+
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright &copy; KH Information Educational Institute E-Class</p>
+
+      <section>
+        <a href="#">프로젝트 소개</a>
+        <span>|</span>
+        <a href="#">이용약관</a>
+        <span>|</span>
+        <a href="#">개인정보처리방침</a>
+        <span>|</span>
+        <a href="#">고객센터</a>
+      </section>
+    </footer>
+
+</body>
+</html>

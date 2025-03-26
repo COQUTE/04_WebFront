@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  width: 1140px;
+  margin: auto;
+}
+
+header {
+  height: 200px;
+  display: flex;
+}
+
+header > section:nth-of-type(2n+1) {
+  flex-basis: 15%;
+}
+
+header > section:nth-of-type(2) {
+  flex-basis: 70%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > section:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-logo {
+  width: 120px;
+}
+
+.search-area {
+  width: 500px;
+}
+
+.search-area fieldset {
+  border: 2px solid #455ba8;
+  border-radius: 5px;
+  padding: 2px;
+
+  display: flex;
+}
+
+#query {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  /* outline : input 태그에 포커싱되었을 때
+  이를 표현하기 위한 바깥선 */
+  flex-basis: 92%;
+}
+
+#search-btn {
+  flex-basis: 8%;
+  cursor: pointer;
+  font-size: 20px;
+  color: #455ba8;
+  background-color: transparent;
+  border: none;
+}
+
+nav {
+  height: 50px;
+  border-bottom: 2px solid black;
+
+  position: sticky;
+  /* sticky : 특정 스크롤 위치에 도달했을 때
+  요소가 고정되는 효과를 주는데 사용함.
+  top, bottom, left, right 속성이 필수로
+  같이 작성되어야함
+  -> 임계점 도달 시 어느 위치에 부착할지
+  정해야 하기 때문.. */
+  top: 0;
+  background-color: white;
+}
+
+nav > ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+nav li {
+  flex-basis: 150px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  height: 100%;
+  display: block;
+  
+  text-align: center;
+  line-height: 50px;
+
+  transition-duration: 0.2s;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #455ba8;
+  color: white
+}
+
+.content {
+  display: flex;
+}
+
+.content-1 {
+  flex-basis: 70%;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.content-item {
+  width: 90%;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.content-item > div {
+  width: 100%;
+  height: 200px;
+}
+
+.content-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 이미지가 부모태그(div)에 맞춰지면서
+  비율을 유지하고, 넘치는 부분은 잘림.
+  이미지가 자동으로 가운데 정렬됨 */
+}
+
+.content-2 {
+  flex-basis: 30%;
+}
+
+.content-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.content-item p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 최대 3줄까지 표시 */
+  -webkit-box-orient: vertical; /* 텍스트 수직 방향 정렬 */
+  overflow: hidden;
+}
+
+form[name="login-form"] {
+  height: 130px;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#id-pw-area {
+  flex-basis: 70%;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+
+#id-pw-area > section:first-child {
+  flex-basis: 75%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#id-pw-area > section:last-child {
+  flex-basis: 25%;
+}
+
+#id-pw-area input {
+  padding: 5px;
+  flex-basis: 50%;
+  outline: none;
+  border: none;
+  border-right: 1px solid #ddd;
+}
+
+#id-pw-area input:first-child {
+  border-bottom: 1px solid #ddd;
+}
+
+#id-pw-area input:focus {
+  border: 2px solid #455ba8;
+}
+
+#id-pw-area button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#id-pw-area button:hover {
+  background-color: #455ba8;
+  color: white;
+}
+
+form[name="login-form"] > label {
+  flex-basis: 30%;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#signup-find-area {
+  margin-left: 10px;
+}
+
+#signup-find-area > a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#signup-find-area > span {
+  padding: 0 10px;
+}
+
+footer {
+  height: 200px;
+  background-color: #a3add342;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > p {
+  font-weight: bold;
+}
+
+footer > section > * {
+  font-size: 14px;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer span {
+  padding: 0 10px;
+}
