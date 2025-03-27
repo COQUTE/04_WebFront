@@ -7,13 +7,14 @@
 /* color: #F0F6FC; 대표적인 폰트색 */
 
 body {
+  background-color: #0d1117;
   margin: 0;
 }
-ul {
+ul, ol {
   margin: 0;
   padding: 0;
 }
-ul > li {
+ul > li, ol > li {
   list-style: none;
 }
 h2, h3 {
@@ -25,52 +26,337 @@ a {
 button {
   border: 1px solid #3d444d;
   border-radius: 5px;
+  padding: 0;
   background-color: transparent;
-}
-img {
-  width: 20px;
+  cursor: pointer;
 }
 
 #page-profile {
-  background-color: #0d1117;
-
   display: flex;
   flex-direction: column;
 }
 
 /* 헤더 */
 header {
-  flex-basis: 10%;
+  flex-basis: 20%;
   background-color: #010409;
   border-bottom: 1px solid #3d444d;
+
+  display: flex;
+  flex-direction: column;
 }
 header a, span {
+  border-radius: 5px;
   font-size: 14px;
   color: #F0F6FC;
+}
+header button:not(#query){
+  width: 32px;
+  height: 32px;
+}
+header a:hover,
+header button:hover {
+  transition-duration: 0.2s;
+  background-color: #15191f;
+}
+/* 헤더 내 글로벌 바 */
+.global-bar {
+  padding: 16px 16px 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+}
+.global-bar a {
+  font-weight: 500;
+}
+.start i, .end i {
+  color: #9198A1;
+}
+.start {
+  flex-basis: 10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.start .fa-github {
+  font-size: 32px;
+}
+.end {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#query {
+  width: 260px;
+  height: 30px;
+  text-align: left;
+}
+#query > span {
+  flex-basis: 10%;
+  color: #9198A1;
+}
+#query > span > span {
+  border: 1px solid #9198A1;
+  border-radius: 3px;
+  padding: 0px 6px;
+}
+.end > div {
+  display: flex;
+}
+.end > button:nth-of-type(2) {
+  flex-basis: 10%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.end img {
+  width: 16px;
+}
+.end > img {
+  width: 32px;
+  border: 1px solid #383E46;
+  border-radius: 50%;
+}
+
+/* 헤더 내 로컬 바 */
+.local-bar {
+  padding: 0px 16px;
+}
+.local-bar a {
+  font-weight: 300;
+}
+.local-list {
+  display: flex;
+}
+.local-list i {
+  color: #9198A1;
+}
+.local-list a {
+  padding: 0px 8px;
 }
 
 /* 메인 */
 main {
-  flex-basis: 80%;
+  flex-basis: 60%;
 }
-main h2, h3, a, span {
+main h2, a, span {
   color: #F0F6FC;
+}
+#container {
+  margin: 8px 0px 0px;
+  padding: 28px 32px 0px;
+
+  display: flex;
+}
+#container > div {
+  padding: 0 5px;
 }
 
 /* 유저 프로필 */
+.user-profile {
+  flex-basis: 20%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.profile-main {
+  flex-basis: 40%;
+}
+.name {
+  padding: 16px 0px;
+}
+.name > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.name > span:first-child {
+  font-size: 30px;
+  font-weight: bold;
+}
+.name > span:last-child {
+  font-size: 25px;
+  font-weight: lighter;
+  color: #9198A1;
+}
+.explain > div {
+  font-size: 16px;
+  color: #F0F6FC;
+}
+.explain > button {
+  width: 100%;
+  height: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #F0F6FC;
+  padding: 5px 16px;
+  background-color: #212830;
+}
+.explain > button:hover {
+  background-color: #262c36;
+}
+.profile-main img {
+  width: 290px;
+  border: 2px solid #383E46;
+  border-radius: 50%;
+}
+.user-etc {
+  flex-basis: 60%;
+}
 
 /* 유저 컨텐츠 */
+.user-content {
+  margin-left: 20px;
+  flex-basis: 70%;
+}
+.user-content > h2 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px 0px 8px;
+}
+.repos-item,
+.graph-wrap, .graph td {
+  border: 1px solid #3d444d;
+  border-radius: 3px;
+}
+/* repos */
+.user-content ol {
+  margin-bottom: 24px;
 
+  display: flex;
+  flex-wrap: wrap;
+}
+.repos > li {
+  margin: 0px 0px 16px;
+  padding: 1px 8px;
+
+  flex-basis: 50%;
+}
+.repos-item {
+  border-radius: 6px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+}
+.repos-title {
+  display: flex;
+  justify-content: space-between;
+}
+.repos-title > span:first-child {
+  color: #4493F8;
+  font-weight: 600;
+  cursor: pointer;
+}
+.repos-title > span:first-child:hover {
+  text-decoration: underline;
+}
+.repos-title > span:last-child {
+  font-size: 12px;
+  color: #9198A1;
+  padding: 0px 6px;
+  border: 1px solid #3d444d;
+  border-radius: 50px;
+}
+.repos-item > div:nth-child(2) {
+  height: 18px;
+}
+.repos-type > span:first-child {
+  display: inline-block;
+  margin-right: 3px;
+  border-radius: 50px;
+  width:12px;
+  height:12px;
+}
+.repos-type.Java > span:first-child {
+  background-color: #b07219;
+}
+.repos-type.PLSQL > span:first-child {
+  background-color: #dad8d8;
+}
+.repos-type.HTML > span:first-child {
+  background-color: #e34c26;
+}
+.repos-type.C > span:first-child {
+  background-color: #555555;
+}
+.repos-type > span:last-child {
+  font-size: 12px;
+  color: #9198A1;
+}
+.repos-item > div {
+  flex-basis: calc(100 / 3);
+}
+/* graph */
+.graph-wrap {
+  padding: 8px 0px;
+}
+.graph {
+  margin: 0px 8px;
+  padding: 4px 0px 0px;
+}
+.graph > div {
+  color: #9198A1;
+  font-size: 12px;
+}
+.graph td {
+  background-color: #151B23;
+  border: 1px solid #21272E;
+  width: 10px;
+  height: 10px;
+}
+.graph tr > 
 
 /* 푸터 */
-
 footer {
-  flex-basis: 10%;
+  flex-basis: 20%;
+}
+.footer-wrap {
+  padding: 64px 40px 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-wrap > div {
+  margin: 0px 8px;
+
+  display: flex;
+  align-items: center;
+}
+footer .fa-github {
+  font-size: 24px;
+}
+.footer-wrap > div > a {
+  margin-right: 8px;
+}
+.footer-list {
+  display: flex;
+  align-items: center;
+}
+.footer-list > li {
+  margin: 0px 8px;
 }
 footer span,
 footer a {
   font-size: 12px;
   color: #9198A1;
 }
-
+.footer-wrap .fa-github:hover {
+  color: #424850;
+}
+.footer-list a:hover {
+  color: #4493F8;
+  text-decoration: underline;
+}
