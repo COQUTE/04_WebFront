@@ -100,23 +100,20 @@ test2.addEventListener("click", function() {
   this.innerText = count;
 });
 
-box3.addEventListener("click", function() {
+const input3 = document.querySelector("#input3");
+const box3 = document.querySelector("#box3");
 
-  const color = document.querySelector("#input3").value;
+box3.addEventListener("click", function(e) {
 
-  console.log(color);
+  // e.target : 이벤트가 발생한 대상 요소 == this
 
-  alert(`배경색 : ${color}`);
+  alert(`배경색 : ${e.target.style.backgroundColor}`);
+
+  // alert(`배경색 : ${this.style.backgroundColor}`);
 });
 
-function changeBg() {
-  
-};
-
 input3.addEventListener("keyup", function(e) {
-  const box = document.querySelector("#box3");
-  
   if(e.key == "Enter") {
-    box.style.backgroundColor = this.value;
+    box3.style.backgroundColor = this.value;
   }
 });
