@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07_요소접근방법</title>
+  <link rel="stylesheet" href="../css/07_요소접근방법.css">
+</head>
+<body>
+  <h1>DOM(Document Object Model : 문서 객체 모델)</h1>
+
+    <pre>
+      웹 문서(HTML)의 모든 요소를 객체 형식으로 표현한 것
+      (HTML 요소 == JS에서 객체라고 부름)
+      -> 문서 내 특정 요소에 접근 가능
+      + 요소(객체)에 속성 값을 세팅 또는 얻어올 수 있다
+    </pre>
+
+    document.getElementById("id속성값");
+    document.getElementsByClassName("class속성값");
+
+    <hr>
+    <h1>DOM을 이용한 요소 접근 하기</h1>
+
+    <pre>
+      1. id로 접근하기 : document.getElementById("id속성값");
+        -> 아이디가 일치하는 요소(객체)를 얻어옴
+      
+      2. class로 접근하기 : document.getElementsByClassName("class속성값");
+        -> 클래스가 일치하는 모든 요소를 얻어와 배열 형태로 반환  
+
+      3. name으로 접근하기 : document.getElementsByName("name속성값");
+        -> name이 일치하는 모든 요소를 얻어와 배열(NodeList, 유사배열) 형태로 반환  
+
+      4. tag로 접근하기 : document.getElementsByTagName("tag명");
+        -> 태그가 일치하는 모든 요소를 얻어와 배열 형태로 반환  
+
+      5. CSS 선택자로 접근하기
+      
+        1) document.querySelector("CSS 선택자");
+          -> 선택자가 선택한 요소 중 첫 번째 요소를 반환
+
+        2) document.querySelectorAll("CSS 선택자");
+          -> 선택한 요소 모두를 배열(NodeList, 유사배열) 형태로 반환
+    </pre>
+
+    <hr>
+
+    <h3>class를 이용한 요소(DOM 객체) 접근하기</h3>
+    
+    <button onclick="classTest()">배경색 변경</button>
+    <div class="cls-test"></div>
+    <div class="cls-test"></div>
+    <div class="cls-test"></div>
+
+    <hr>
+    
+    <h3>태그명으로 요소 접근하기</h3>
+
+    <ul>
+      <li>#ffbe0b</li>
+      <li>#fb5607</li>
+      <li>#ff006e</li>
+      <li>#8338ec</li>
+      <li>#3a86ff</li>
+    </ul>
+  <button onclick="tagNameTest()">배경색 변경</button>
+
+  <hr>
+
+  <h3>name으로 요소 접근하기</h3>
+
+  <pre>
+      name 속성은 input 또는 input 관련 태그만
+      기본 속성으로 가지고 있다
+  </pre>
+
+  <table>
+      <tr>
+      <td>
+          <input type="checkbox" name="hobby" id="game" value="게임">
+          <label for="game">게임</label>
+      </td>
+      <td>
+        <input type="checkbox" name="hobby" id="music" value="음악감상">
+        <label for="music">음악감상</label>
+      </td>
+      <td>
+        <input type="checkbox" name="hobby" id="movie" value="영화감상">
+        <label for="movie">영화감상</label>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+        <input type="checkbox" name="hobby" id="coding" value="코딩">
+        <label for="coding">코딩</label>
+      </td>
+      <td>
+        <input type="checkbox" name="hobby" id="exercise" value="운동">
+        <label for="exercise">운동</label>
+      </td>
+      <td>
+        <input type="checkbox" name="hobby" id="book" value="독서">
+        <label for="book">독서</label>
+      </td>
+      </tr>
+    </table>
+
+    <div id="name-div"></div>
+
+    <button onclick="nameTest()">선택된 취미만 출력하기</button>
+
+    <hr>
+    <h3>CSS 선택자로 요소 접근하기</h3>
+
+    <div target-div="css-div">
+      <div>test1</div>
+      <div>test2</div>
+    </div>
+
+    <button onclick="cssTest()">css 선택자로 요소 접근하기</button>
+
+    <hr><hr><hr>
+
+    <h3>카카오톡 모양의 채팅 화면 만들기</h3>
+
+    <div class="chatting">
+      <div id="chatting-bg">
+        <p><span>입력되는 채팅 출력</span></p>
+        <p><span>입력되는 채팅 출력</span></p>
+        <p><span>입력되는 채팅 출력</span></p>
+      </div>
+
+      <div id="chatting-input">
+        <input type="text" id="user-input">
+        <button onclick="readValue()">입력</button>
+      </div>
+    </div>
+
+  <script src="../js/07_요소접근방법.js"></script>
+</body>
+</html>

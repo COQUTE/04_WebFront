@@ -1,0 +1,85 @@
+.cls-test {
+  width: 400px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+#name-div {
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+[target-div="css-div"] {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+[target-div="css-div"] > div {
+  height: 50%;
+}
+
+[target-div="css-div"] > div:first-child {
+  background-color: pink;
+}
+[target-div="css-div"] > div:last-child {
+  background-color: yellow;
+}
+
+/* 카카오톡 채팅 화면 만들기 */
+.chatting, .chatting * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* 전체 감싸는 요소 */
+.chatting {
+  width: 360px;
+  border: 1px solid black;
+  margin: 50px 20px;
+}
+
+/* 채팅 출력 부분 */
+#chatting-bg {
+  background-color: rgb(178, 199, 217);
+  width: 100%;
+  height: 400px;
+
+  /* overflow : 내부 내용이 감싸는 요소를 넘었을 때 처리하는 속성 */
+  /* auto : 넘치기 전 -> 변화없음 , 넘친 후 -> 스크롤 발생 */
+  /* hidden : 넘친 부분을 안보이게끔 처리함 */
+  overflow: auto;
+}
+
+/* 채팅 내용 */
+#chatting-bg > p {
+  margin: 20px 10px;
+  text-align: right;
+}
+
+#chatting-bg > p > span {
+  background-color: rgb(254, 234, 51);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* 입력 부분 */
+#chatting-input {
+  width: 100%;
+  display: flex;
+  height: 22px;
+}
+
+#chatting-input > input {
+  height: 100%;
+  width: 90%;
+  outline: 0;
+  padding-left: 5px;
+}
+
+#chatting-input > button {
+  height: 100%;
+  width: 10%;
+}
