@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-/* background-color: #0d1117; 전체 배경색 */
-/* border: 1px solid #3d444d; 전체 보더색 */
-/* color: #F0F6FC; 대표적인 폰트색 */
-
 body {
   background-color: #0d1117;
   margin: 0;
