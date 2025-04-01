@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bomberman</title>
+
+  <style>
+    #box {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border: 2px solid black;
+      overflow: hidden;
+    }
+
+    img {
+      position: absolute;
+      width: 50px;
+    }
+
+    img:not(#bomberman) {
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>봄버맨!</h1>
+  <ul>
+    <li>방향키로 이동 : 누르고 있으면 키 방향으로 계속 이동</li>
+    <li>x 키 누를 때마다 폭탄 생성</li>
+    <li>z 키 누르면 모든 폭탄 터짐</li>
+  </ul>
+  <div id="box">
+    <img src="../../images/bomberman.png" id="bomberman">
+  </div>
+
+  <script src="../js/bomberman.js"></script>
+</body>
+</html>
