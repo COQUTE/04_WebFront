@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'Ownglyph_ParkDaHyun';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-family: 'Ownglyph_ParkDaHyun';
+}
+
+#menu {
+  margin: auto;
+  width: 1000px;
+  height: 800px;
+  background-color: #e8e2d2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu > div {
+  width: 80%;
+}
+
+#header {
+  background-color: #ceab88;
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 10px;
+  
+  font-size: 30px;
+  
+  flex-basis: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#header > span:nth-of-type(1) {
+  flex-basis: 15%;
+}
+#header > span:nth-of-type(2) {
+  flex-basis: 80%;
+}
+#header > input {
+  transition-duration: 0.4s;
+  flex-basis: 80%;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+
+  font-size: 35px;
+  
+  display: none;
+}
+#header > input:focus {
+  background-color: #b4987d;
+  padding: 40px;
+}
+
+#list {
+  background-color: white;
+  padding: 10px;
+  font-size: 20px;
+
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.item {
+  margin: 20px;
+  width: 30%;
+  font-size: 25px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer {
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 10px;
+
+  flex-basis: 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.edit > button {
+  transition-duration: 0.2s;
+  background-color: rgb(31, 31, 31);
+  border-radius: 30px;
+  padding: 10px;
+  width: 80px;
+
+  color: #eee;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.edit > button:hover {
+  background-color: rgb(96, 96, 96);
+
+  cursor: pointer;
+}
+
+.b-hidden {
+  display: none;
+}
