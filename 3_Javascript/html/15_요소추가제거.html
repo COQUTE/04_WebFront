@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15_요소추가제거</title>
+  <link rel="stylesheet" href="../css/15_요소추가제거.css">
+</head>
+<body>
+  <div>
+    <h1>input에 작성된 값 모두 더하기</h1>
+ 
+    <pre>
+      - 추가 버튼 클릭 시 화면에 input 요소가 추가됨
+
+      - 계산 버튼을 클릭 했을 때
+       모든 input 요소에 작성된 값의 합을 alert()로 출력
+ 
+      [도전!]
+      - 추가 버튼 클릭 시 input 요소 옆에 x 버튼 만들기
+        x 모양 만들기 : <span>&times;</span>
+ 
+      - x 버튼 클릭 시
+        해당 줄의 input, x 버튼 삭제하기
+
+      hint.
+        요소 삭제 방법  :  요소.remove()
+    </pre>
+  </div>
+ 
+  <div>
+    <button id="add">추가</button>
+    <button id="calc">계산</button>
+ 
+    <div class="container">
+        <div class="row">
+            <input type="number" class="input-number">
+        </div>
+   
+        <div class="row">
+            <input type="number" class="input-number">
+        </div>
+       
+    </div>
+    <!-- JS 만들 요소 견본  -->
+    <!--    
+      <div class="row">
+        <input type="number" class="input-number">
+        <span class="remove-row">&times;</span>
+      </div>
+    -->
+</div>
+
+  <script src="../js/15_요소추가제거.js"></script>
+</body>
+</html>

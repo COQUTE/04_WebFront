@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14_요소생성하기</title>
+  <link rel="stylesheet" href="../css/14_요소생성하기.css">
+</head>
+<body>
+  <h1>요소 생성 : document.createElement("")</h1>
+
+  <button id="createBox">박스생성하기(createElement)</button>
+  <button id="innerHTMLBox">박스생성하기(innerHTML)</button>
+  
+  <div class="container test box-container">
+    <div class="box">
+      <input type="text">
+    </div>
+  </div>
+
+  <pre>
+    innerHTML과 append(또는 appendChild)는 동작방식이 다름.
+    차이점은 innerHTML은 DOM에 리렌더링 과정이 일어나며 전체 요소를
+    덮어쓰고,
+    append는 기존 요소를 유지하면서 새로운 요소를 추가한다.
+    (DOM 리렌더링 X)
+  </pre>
+
+  <script src="../js/14_요소생성하기.js"></script>
+</body>
+</html>
