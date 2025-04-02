@@ -5,6 +5,8 @@ document.addEventListener("keydown", (e) => {
 
   const bomberman = document.querySelector("#bomberman");
 
+  console.log(e.key);
+
   switch(e.key) {
     case "ArrowUp" : charY -= 10; break;
     case "ArrowRight" : charX += 10; break;
@@ -12,7 +14,7 @@ document.addEventListener("keydown", (e) => {
     case "ArrowLeft" : charX -= 10; break;
     case "x": addBomb(); break;
     case "z": explosion(); break;
-    default: return;
+    default: alert("방향키, z, x만 가능");
   }
 
   bomberman.style.transform = `translate(${charX}px, ${charY}px)`;
@@ -21,7 +23,10 @@ document.addEventListener("keydown", (e) => {
 const box = document.querySelector("#box");
 
 const addBomb = () => {
-  box.innerHTML += `<img src="../../images/bomb.png" class='bomb' style="transform: translate(${charX + 40}px, ${charY}px);">`;
+  box.innerHTML += 
+  `<img src="../../images/bomb.png"
+  class='bomb' style="transform: translate(${charX}px, ${charY}px);
+  position: absolute">`;
   // box.innerHTML += ..을 실행하는 과정에서 DOM이 리렌더링됨.
   // 기존에 bomberman을 가리키던 const bomberman = document.querySelector("#bomberman");
   // 더이상 유효하지 않은 변수가 됨.
@@ -30,9 +35,15 @@ const addBomb = () => {
 };
 
 const explosion = () => {
-  const bomb = document.querySelectorAll(".bomb");
-
-  for(let i = 0; i < bomb.length; i++) {
-    bomb[i].src = "../../images/boomm.png";
+  const bombs = document.querySelectorAll(".bomb");
+  
+  // for .. of 문 :
+  // 배열같은 반복 가능한 객체의 요소를 순차적으로 순회하는 반복문
+  for(let bomb of bombs) {
+    bomb.src = "../../images/boomm.png";
   }
+  
+  // for(let i = 0; i < bomb.length; i++) {
+  //   bomb[i].src = "../../images/boomm.png";
+  // }
 }
