@@ -83,14 +83,14 @@
   width: 30%;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
-.item > span,
-.item > input {
+.item > *:not(.ck) {
+  margin-left: 5px;
   width: 45%;
   font-size: 25px;
 }
-.item > input {
+.item > input:not(.ck) {
   border-radius: 5px;
   border: 2px dashed gray;
 }

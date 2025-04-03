@@ -37,13 +37,16 @@ document.querySelector(".ed").addEventListener("click", (e) => {
     const div = document.createElement("div");
     div.classList.add("item");
     
+    const check = document.createElement("input");
+    check.type = "checkbox";
+    check.classList.add("ck");
     const input1 = document.createElement("input");
     const input2 = document.createElement("input");
 
     input1.value = item.firstElementChild.innerText;
     input2.value = item.lastElementChild.innerText;
 
-    div.append(input1, input2);
+    div.append(check, input1, input2);
     item.parentElement.append(div);
 
     item.remove();
@@ -74,8 +77,10 @@ document.querySelector(".exit").addEventListener("click", (e) => {
     const span1 = document.createElement("span");
     const span2 = document.createElement("span");
 
-    span1.innerText = item.firstElementChild.value;
-    span2.innerText = item.lastElementChild.value;
+    const lastSpan = item.lastElementChild;
+
+    span1.innerText = lastSpan.previousElementSibling.value;
+    span2.innerText = lastSpan.value;
 
     div.append(span1, span2);
     item.parentElement.append(div);
@@ -109,4 +114,9 @@ document.querySelector(".add").addEventListener("click", () => {
 
 document.querySelector(".del").addEventListener("click", (e) => {
   
+  const items = document.querySelectorAll(".item");
+
+  for(let item of items) {
+    if(item.firstElementChild.checked) item.remove();
+  }
 });
