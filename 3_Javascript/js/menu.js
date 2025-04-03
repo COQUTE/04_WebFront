@@ -43,8 +43,10 @@ document.querySelector(".ed").addEventListener("click", (e) => {
     const input1 = document.createElement("input");
     const input2 = document.createElement("input");
 
+    const regExp = /^\d{1,}/;
+
     input1.value = item.firstElementChild.innerText;
-    input2.value = item.lastElementChild.innerText;
+    input2.value = regExp.exec(item.lastElementChild.innerText);
 
     div.append(check, input1, input2);
     item.parentElement.append(div);
@@ -79,8 +81,10 @@ document.querySelector(".exit").addEventListener("click", (e) => {
 
     const lastSpan = item.lastElementChild;
 
+    const regExp = /^\d{1,}/;
+
     span1.innerText = lastSpan.previousElementSibling.value;
-    span2.innerText = lastSpan.value;
+    span2.innerText = regExp.exec(lastSpan.value) + "원";
 
     div.append(span1, span2);
     item.parentElement.append(div);
